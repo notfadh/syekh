@@ -1,0 +1,754 @@
+/* =========================================================
+   SYEKH — Ulama Nusantara
+   Stylesheet utama
+   ========================================================= */
+
+/* 1. DASAR */
+:root {
+    --green-dark: #173D32;
+    --green: #174B3A;
+    --blue: #243B64;
+    --brown: #79533A;
+    --purple: #49365F;
+    --cream: #F5F1E8;
+    --gold: #D5B477;
+    --gold-light: #E4C58A;
+    --text: #242824;
+    --muted: #6F756F;
+    --white: #FFFFFF;
+    --shadow: 0 12px 35px rgba(20, 35, 28, 0.10);
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    transition: color 0.25s ease, background-color 0.25s ease,
+                transform 0.25s ease;
+}
+
+::selection {
+    color: var(--green-dark);
+    background: var(--gold-light);
+}
+
+/* 2. NAVBAR */
+.navbar {
+    z-index: 1050;
+    padding: 16px 0;
+    background: rgba(23, 61, 50, 0.98);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.navbar .container {
+    overflow: visible;
+}
+
+.navbar-brand {
+    color: var(--cream);
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar-brand:hover {
+    color: var(--cream);
+}
+
+.navbar-brand span,
+footer h3 span {
+    color: var(--gold);
+}
+
+.navbar-nav {
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-link {
+    padding: 10px 0 !important;
+    color: var(--cream) !important;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.show {
+    color: var(--gold) !important;
+}
+
+.dropdown-menu {
+    width: max-content;
+    min-width: 280px;
+    max-width: min(90vw, 370px);
+    margin-top: 12px !important;
+    padding: 9px;
+    border: 1px solid rgba(23, 61, 50, 0.08);
+    border-radius: 10px;
+    background: var(--cream);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 11px 13px;
+    border-radius: 6px;
+    color: var(--green-dark);
+    font-size: 12px;
+    line-height: 1.65;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: var(--cream);
+    background: var(--green-dark);
+}
+
+/* 3. HERO / HALAMAN DEPAN */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 140px 0 90px;
+    color: var(--cream);
+    background:
+        linear-gradient(rgba(15, 48, 38, 0.92), rgba(15, 48, 38, 0.94)),
+        url("images/islamic-pattern.jpg") center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-label,
+.section-label {
+    display: inline-block;
+    color: #A1844D;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.hero-label {
+    color: var(--gold);
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    margin: 28px 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 700;
+    line-height: 1.18;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--gold);
+}
+
+.hero-content p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #D5DED7;
+    font-size: 14px;
+    line-height: 2.1;
+}
+
+.hero-line {
+    width: 70px;
+    height: 2px;
+    margin: 32px auto 18px;
+    background: var(--gold);
+}
+
+.hero-content small {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.hero-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 5%;
+    color: #AAB8AE;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* 4. PENGANTAR */
+.introduction {
+    padding: 100px 0;
+    background: var(--cream);
+}
+
+.introduction h2,
+.section-heading h2 {
+    margin: 16px 0;
+    color: var(--green-dark);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(32px, 4vw, 43px);
+    font-weight: 700;
+}
+
+.introduction p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* 5. PENGENALAN ULAMA */
+.scholar-intro {
+    padding: 100px 0;
+    background: #EEE9DE;
+}
+
+.section-heading {
+    margin-bottom: 58px;
+    text-align: center;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.intro-card {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+    margin-bottom: 38px;
+    padding: 42px;
+    border-radius: 10px;
+    color: var(--white);
+    scroll-margin-top: 100px;
+    box-shadow: var(--shadow);
+}
+
+.intro-card:last-child {
+    margin-bottom: 0;
+}
+
+.intro-image {
+    flex: 0 0 40%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.intro-image:hover img {
+    transform: scale(1.05);
+}
+
+.intro-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.intro-content > span {
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.intro-content h2 {
+    margin: 17px 0;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(25px, 3vw, 35px);
+    line-height: 1.3;
+}
+
+.intro-content p {
+    margin-bottom: 24px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 12px;
+    line-height: 2;
+}
+
+.theme-green { --theme: var(--green); }
+.theme-blue { --theme: var(--blue); }
+.theme-brown { --theme: var(--brown); }
+.theme-purple { --theme: var(--purple); }
+
+.intro-card.theme-green { background: var(--green); }
+.intro-card.theme-blue { background: var(--blue); }
+.intro-card.theme-brown { background: var(--brown); }
+.intro-card.theme-purple { background: var(--purple); }
+
+.btn-biografi {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 4px;
+    color: var(--green-dark);
+    background: var(--gold);
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-biografi:hover {
+    color: var(--green-dark);
+    background: #F0D49A;
+    transform: translateY(-2px);
+}
+
+/* 6. BIOGRAFI LENGKAP */
+.biography {
+    padding: 95px 0;
+    scroll-margin-top: 80px;
+}
+
+.biography.theme-green { background: var(--green); }
+.biography.theme-blue { background: var(--blue); }
+.biography.theme-brown { background: var(--brown); }
+.biography.theme-purple { background: var(--purple); }
+
+.bio-heading {
+    margin-bottom: 42px;
+    color: var(--white);
+}
+
+.bio-heading span,
+.works-heading span {
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.bio-heading h2,
+.works-heading h2 {
+    margin: 16px 0 12px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(29px, 4vw, 42px);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.bio-heading p,
+.works-heading p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.bio-box {
+    padding: 42px;
+    border-radius: 9px;
+    background: var(--cream);
+}
+
+.bio-box h3 {
+    margin: 35px 0 17px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--gold);
+    color: var(--green-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.bio-box h3:first-child {
+    margin-top: 0;
+}
+
+.bio-box p {
+    margin-bottom: 16px;
+    color: #555B55;
+    font-size: 13px;
+    line-height: 2;
+    text-align: justify;
+}
+
+.bio-data {
+    margin: 24px 0 32px;
+    padding: 20px 24px;
+    border-left: 4px solid var(--gold);
+    border-radius: 0 5px 5px 0;
+    background: var(--white);
+}
+
+.bio-data p {
+    margin-bottom: 9px;
+    text-align: left;
+}
+
+.bio-data p:last-child {
+    margin-bottom: 0;
+}
+
+.bio-data strong {
+    color: var(--green-dark);
+}
+
+/* 7. TOMBOL MENUJU KARYA */
+.btn-karya {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    color: var(--green-dark);
+    background: var(--gold);
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-karya:hover {
+    color: var(--green-dark);
+    background: #F0D49A;
+    transform: translateY(-2px);
+}
+
+/* 8. BAGIAN KARYA */
+.works-detail {
+    padding: 95px 0;
+    scroll-margin-top: 90px;
+}
+
+.works-detail.theme-green { background: var(--green); }
+.works-detail.theme-blue { background: var(--blue); }
+.works-detail.theme-brown { background: var(--brown); }
+.works-detail.theme-purple { background: var(--purple); }
+
+.works-heading {
+    margin-bottom: 45px;
+    color: var(--white);
+}
+
+.detail-card {
+    height: 100%;
+    padding: 28px;
+    border-bottom: 3px solid var(--gold);
+    border-radius: 6px;
+    background: var(--cream);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+}
+
+.detail-card h4 {
+    margin-bottom: 13px;
+    color: var(--green-dark);
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.detail-card p {
+    margin: 0;
+    color: #666D66;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* 9. FOOTER */
+footer {
+    padding: 48px 0;
+    color: var(--cream);
+    background: var(--green-dark);
+}
+
+footer h3 {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+footer p {
+    margin: 15px 0 22px;
+    color: #D5DED7;
+    font-size: 12px;
+}
+
+footer p a {
+    text-decoration: none;
+}
+
+footer p a:hover {
+    color: var(--gold) !important;
+}
+
+footer small {
+    color: #AAB8AE;
+    font-size: 10px;
+}
+
+/* 10. RESPONSIVE TABLET & MOBILE */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        align-items: stretch;
+        gap: 4px;
+        padding-top: 14px;
+    }
+
+    .nav-link {
+        padding: 9px 0 !important;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-top: 4px !important;
+        border: 0;
+        box-shadow: none;
+    }
+
+    .navbar-collapse {
+        max-height: 75vh;
+        overflow-y: auto;
+    }
+
+    .intro-card {
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .intro-image {
+        flex-basis: 38%;
+        height: 310px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    html {
+        scroll-padding-top: 76px;
+    }
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+
+    .hero {
+        min-height: 90vh;
+        padding: 125px 0 85px;
+    }
+
+    .hero-label {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .hero-bottom {
+        bottom: 18px;
+        padding: 0 20px;
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .introduction,
+    .scholar-intro {
+        padding: 72px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .intro-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        margin-bottom: 25px;
+        padding: 22px;
+    }
+
+    .intro-image {
+        flex: auto;
+        width: 100%;
+        height: 300px;
+    }
+
+    .intro-content h2 {
+        font-size: 27px;
+    }
+
+    .biography,
+    .works-detail {
+        padding: 72px 0;
+    }
+
+    .bio-box {
+        padding: 25px 22px;
+    }
+
+    .bio-box h3 {
+        font-size: 20px;
+    }
+
+    .bio-box p {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .bio-data {
+        padding: 17px;
+    }
+
+    .works-heading {
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-bottom span {
+        max-width: 48%;
+    }
+
+    .intro-image {
+        height: 250px;
+    }
+
+    .bio-box {
+        padding: 22px 17px;
+    }
+
+    .detail-card {
+        padding: 23px;
+    }
+}
+
+/* 11. AKSESIBILITAS: KURANGI ANIMASI */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* 12. PETA PERJALANAN 3D */
+.journey{padding:95px 0;color:var(--white);background:radial-gradient(circle at 50% 0,#1d4a3c,var(--green-dark) 70%);scroll-margin-top:80px}
+.journey-heading span{color:var(--gold-light);font-size:10px;font-weight:600;letter-spacing:3px}
+.journey-heading h2{margin:16px 0 12px;font-family:"Playfair Display",serif;font-size:clamp(29px,4vw,42px);font-weight:700}
+.journey-heading p{max-width:640px;margin:0 auto 32px;color:rgba(255,255,255,.8);font-size:12px;line-height:1.9}
+.journey-tools{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:16px}
+.journey-filter{display:flex;flex-wrap:wrap;gap:8px}
+.journey-filter button{padding:8px 16px;border:1px solid var(--c,var(--gold));border-radius:30px;color:var(--cream);background:transparent;font-size:11px;font-weight:500;transition:.2s}
+.journey-filter button:hover,.journey-filter button.on{color:#10231c;background:var(--c,var(--gold))}
+.journey-tilt{display:flex;align-items:center;gap:10px;color:#D5DED7;font-size:11px}
+.journey-tilt input{accent-color:var(--gold)}
+.map-stage{overflow:hidden;border:1px solid rgba(213,180,119,.35);border-radius:10px;background:linear-gradient(#0a1c22,#0f2f3a);box-shadow:0 20px 50px rgba(0,0,0,.35);perspective:1500px;overflow-x:auto}
+.map-stage svg{display:block;width:100%;min-width:760px;height:auto;transform:rotateX(var(--tilt,24deg));transform-origin:50% 100%;margin-top:-3%;transition:transform .4s}
+.map-info{margin-top:22px;padding:24px 28px;border-left:5px solid var(--c,var(--gold));border-radius:6px;color:var(--text);background:var(--cream)}
+.map-info .who{display:inline-block;margin-bottom:8px;padding:3px 12px;border-radius:20px;color:#10231c;background:var(--c,var(--gold));font-size:10px;font-weight:600;letter-spacing:1px}
+.map-info h3{margin:0 0 6px;color:var(--green-dark);font-family:"Playfair Display",serif;font-size:22px}
+.map-info small{display:block;margin-bottom:10px;color:var(--muted);font-size:11px}
+.map-info p{margin:0;color:#555B55;font-size:13px;line-height:1.95}
+.map-note{margin:16px 0 0;color:#AAB8AE;font-size:10.5px;text-align:center}
+
+/* 13. KUIS */
+[hidden]{display:none !important}
+.quiz-page{background:radial-gradient(circle at 50% 0,#1d4a3c,var(--green-dark) 75%) fixed;color:var(--white)}
+.quiz-wrap{min-height:calc(100vh - 150px);padding:130px 0 70px}
+.quiz-card{position:relative;max-width:760px;margin:0 auto;padding:44px;overflow:hidden;border-radius:12px;color:var(--text);background:var(--cream);box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.quiz-label{color:#A1844D;font-size:10px;font-weight:600;letter-spacing:3px}
+.quiz-card h1{margin:14px 0 12px;color:var(--green-dark);font-family:"Playfair Display",serif;font-size:clamp(28px,4.5vw,38px);font-weight:700}
+.quiz-card h2{margin:22px 0;color:var(--green-dark);font-family:"Playfair Display",serif;font-size:clamp(20px,3vw,25px);line-height:1.5}
+.quiz-lead{color:var(--muted);font-size:13px;line-height:1.95}
+.quiz-facts{display:flex;gap:14px;margin:26px 0}
+.quiz-facts div{flex:1;padding:16px 8px;border-bottom:3px solid var(--gold);border-radius:6px;text-align:center;background:var(--white)}
+.quiz-facts strong{display:block;color:var(--green-dark);font-family:"Playfair Display",serif;font-size:26px}
+.quiz-facts small{color:var(--muted);font-size:11px}
+.quiz-facts .good strong{color:#1f8a4c}.quiz-facts .bad strong{color:#c0392b}
+.quiz-rules{margin:0 0 28px;padding-left:20px;color:#555B55;font-size:13px;line-height:2}
+.quiz-rules a{color:var(--green-dark);font-weight:600}
+.quiz-btn{display:inline-block;padding:13px 26px;border:0;border-radius:5px;color:var(--green-dark);background:var(--gold);font-size:12px;font-weight:600;text-decoration:none;transition:.25s}
+.quiz-btn:hover{color:var(--green-dark);background:#F0D49A;transform:translateY(-2px)}
+.quiz-btn.alt{color:var(--cream);background:var(--green-dark)}.quiz-btn.alt:hover{color:var(--cream);background:var(--green)}
+.quiz-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;font-weight:600;color:var(--green-dark)}
+.quiz-cat{padding:3px 12px;border-radius:20px;color:var(--green-dark);background:var(--gold-light);font-size:10px;letter-spacing:1px}
+.quiz-time{min-width:44px;padding:5px 12px;border-radius:20px;color:var(--cream);background:var(--green-dark);text-align:center}
+.quiz-time.low{background:#c0392b;animation:qpulse .6s infinite alternate}
+@keyframes qpulse{to{transform:scale(1.12)}}
+.quiz-bar{height:6px;margin-top:14px;overflow:hidden;border-radius:6px;background:#DDD6C4}
+.quiz-bar i{display:block;width:100%;height:100%;background:var(--green);transition:width .1s linear,background .3s}
+.quiz-bar i.low{background:#c0392b}
+.quiz-options{display:grid;gap:11px}
+.q-opt{padding:14px 18px;border:2px solid #DDD6C4;border-radius:8px;color:var(--text);background:var(--white);font-size:13px;line-height:1.6;text-align:left;transition:.2s}
+.q-opt:hover:not(:disabled){border-color:var(--gold);transform:translateX(4px)}
+.q-opt:disabled{cursor:default}
+.q-opt.right{border-color:#1f8a4c;color:#14532d;background:#dcf5e5}
+.q-opt.wrong{border-color:#c0392b;color:#7f1d1d;background:#fbe0dc}
+.quiz-feedback{min-height:26px;margin:16px 0 4px;font-size:13px;font-weight:600}
+.quiz-feedback.ok{color:#1f8a4c}.quiz-feedback.no{color:#c0392b}
+.quiz-score{width:150px;height:150px;margin:26px auto 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:6px solid var(--gold);border-radius:50%;background:var(--white);box-shadow:0 0 0 8px rgba(213,180,119,.25)}
+.quiz-score strong{color:var(--green-dark);font-family:"Playfair Display",serif;font-size:50px;line-height:1}
+.quiz-score small{color:var(--muted);font-size:10px;letter-spacing:3px}
+.quiz-skip{color:var(--muted);font-size:12px}
+.quiz-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
+.confetti{position:absolute;inset:0;pointer-events:none}
+.confetti i{position:absolute;top:-14px;width:8px;height:14px;opacity:.9;animation:qfall linear forwards}
+@keyframes qfall{to{transform:translateY(620px) rotate(540deg);opacity:0}}
+@media (max-width:575.98px){.quiz-card{padding:26px 20px}.quiz-facts{gap:8px}.quiz-wrap{padding-top:105px}}

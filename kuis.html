@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Kuis | SYEKH</title>
+        <link href="bootstrap-5/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+        <link href="style-ss.css" rel="stylesheet" />
+    </head>
+    <body class="quiz-page">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="syeikh.html#home">SYEKH <span> . </span></a>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Buka navigasi" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-lg-4">
+                <li class="nav-item"><a class="nav-link" href="syeikh.html#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="syeikh.html#nawawi">Syekh</a></li>
+                <li class="nav-item"><a class="nav-link" href="syeikh.html#bio-nawawi">Biografi</a></li>
+                <li class="nav-item"><a class="nav-link" href="syeikh.html#perjalanan">Perjalanan</a></li>
+                <li class="nav-item"><a class="nav-link" href="syeikh.html#karya-nawawi">Karya</a></li>
+                <li class="nav-item"><a class="nav-link active" href="kuis.html">Kuis</a></li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+
+        <main class="quiz-wrap">
+        <div class="container">
+
+            <!-- 1. PERSIAPAN -->
+            <section class="quiz-card" id="quiz-intro">
+            <span class="quiz-label"> KUIS ULAMA NUSANTARA </span>
+            <h1>Persiapan Sebelum Kuis</h1>
+            <p class="quiz-lead">Uji pemahamanmu tentang Syekh Nawawi, Syekh Yusuf, Syekh Abdus Samad, dan Syekh Ahmad Khatib.</p>
+            <div class="quiz-facts">
+                <div><strong>15</strong><small>Soal</small></div>
+                <div><strong>20 dtk</strong><small>Per soal</small></div>
+                <div><strong>4</strong><small>Pilihan jawaban</small></div>
+            </div>
+            <ul class="quiz-rules">
+                <li>Soal mencakup <b>nama</b>, <b>biografi</b>, <b>karya</b>, dan <b>peta perjalanan</b> para syekh.</li>
+                <li>Setiap soal punya waktu 20 detik. Jika waktu habis, soal otomatis <b>dilewati</b> dan dihitung salah.</li>
+                <li>Pilih satu jawaban saja; jawaban tidak bisa diubah setelah dipilih.</li>
+                <li>Belum yakin? Pelajari dulu <a href="syeikh.html#bio-nawawi">biografi</a>, <a href="syeikh.html#perjalanan">peta perjalanan</a>, dan <a href="syeikh.html#karya-nawawi">karya</a> para syekh.</li>
+            </ul>
+            <button class="quiz-btn" id="btn-start" type="button">Mulai Kuis &rarr;</button>
+            </section>
+
+            <!-- 2. SOAL -->
+            <section class="quiz-card" id="quiz-play" hidden>
+            <div class="quiz-top">
+                <span id="q-count">Soal 1 / 15</span>
+                <span class="quiz-cat" id="q-cat">Nama</span>
+                <span class="quiz-time" id="q-time">20</span>
+            </div>
+            <div class="quiz-bar"><i id="q-bar"></i></div>
+            <h2 id="q-text"></h2>
+            <div class="quiz-options" id="q-options"></div>
+            <div class="quiz-feedback" id="q-feedback" aria-live="polite"></div>
+            <button class="quiz-btn" id="btn-next" type="button" hidden>Lanjut &rarr;</button>
+            </section>
+
+            <!-- 3. HASIL -->
+            <section class="quiz-card text-center" id="quiz-result" hidden>
+            <div class="confetti" id="confetti" aria-hidden="true"></div>
+            <span class="quiz-label"> HASIL KUIS </span>
+            <h1 id="r-title">Selamat!</h1>
+            <p class="quiz-lead" id="r-msg"></p>
+            <div class="quiz-score"><strong id="r-score">0</strong><small>SKOR</small></div>
+            <div class="quiz-facts">
+                <div class="good"><strong id="r-ok">0</strong><small>Benar</small></div>
+                <div class="bad"><strong id="r-bad">0</strong><small>Salah</small></div>
+            </div>
+            <p class="quiz-skip" id="r-skip"></p>
+            <div class="quiz-actions">
+                <button class="quiz-btn" id="btn-again" type="button">Ulangi Kuis</button>
+                <a class="quiz-btn alt" href="syeikh.html#home">Kembali ke Beranda</a>
+            </div>
+            </section>
+
+        </div>
+        </main>
+
+        <footer>
+        <div class="container text-center">
+            <h3>SYEKH <span> . </span></h3>
+            <small> &copy; 2026 SYEKH. All Rights Reserved. </small>
+        </div>
+        </footer>
+        <script src="kuis.js"></script>
+        <script src="bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
